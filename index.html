@@ -4,9 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <title>DaisyUI via CDN</title>
+
   <!-- Tailwind + DaisyUI CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS Scripts -->
+
+  <script src="./script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -30,16 +39,17 @@
 
     <div class="flex items-center space-x-4">
 
-      <button class="btn btn-success rounded-full flex items-center space-x-2 px-6 py-3"
-        style="background-color: #ecfcf1;">
-        <img src="./assets/heart.png" alt="Phone Icon" class="h-5 w-5">
-        <span class="font-bold">0</span>
-      </button>
-      <button class="btn btn-success rounded-full flex items-center space-x-2 px-6 py-3"
+      <div class="rounded-full flex items-center space-x-2 px-6 py-3" style="background-color: #ecfcf1;">
+        <img src="./assets/heart.png" alt="heart Icon" class="h-5 w-5">
+        <span class="font-bold" id="heart-count">0</span>
+      </div>
+
+      <div class="btn btn-success rounded-full flex items-center space-x-2 px-6 py-3"
         style="background-color: #ecfcf1;">
         <img src="./assets/coin.png" alt="Phone Icon" class="h-5 w-5">
-        <span class="font-bold">100</span>
-      </button>
+        <span class="font-bold" id="coin-amount">100</span>
+      </div>
+
       <button class="btn btn-success rounded-full flex items-center space-x-2 px-6 py-3"
         style="background-color: #00A63E;">
         <span class="text-white font-semibold">2 Copy</span>
@@ -63,338 +73,353 @@
 
   </section>
 
+
   <!-- Main Section -->
 
   <main>
 
-    <div class="flex">
+    <div class="main-section p-4" style="background-color: #f5fdf6;">
 
-      <!-- Helplines -->
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-1">
 
-      <div class="grid grid-cols-3 gap-4 p-4">
+        <div class="flex items-center justify-between">
 
-        <div class="bg-white rounded-lg shadow p-4">
-
-          <div class="flex items-center justify-between">
-
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <img src="./assets/emergency.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
           </button>
 
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-bold text-[24px] card-title">National Emergency Number</p>
+        <p class="font-light">National Emergency</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          All
+        </button>
 
-          <div class="flex items-center justify-between">
+        <div class="flex justify-center space-x-4 items-center pt-2 ">
 
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
           </button>
 
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
+          <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
 
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
+          </button>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-2">
 
-          <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
 
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
           </button>
-
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
 
-          <div class="flex items-center justify-between">
+        <p class="font-bold text-[24px] card-title">Police Helpline Number</p>
+        <p class="font-light">Police</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Police
+        </button>
 
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
+        <div class="flex justify-center space-x-4 pt-2 ">
 
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
           </button>
 
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
 
-            <!-- Call Button -->
 
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
+          <button class="flex items-center justify-center space-x-2 rounded-lg call-button"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
 
-            </button>
-          </div>
+          </button>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-3">
 
-          <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
 
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <img src="./assets/fire-service.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
           </button>
-
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
 
-          <div class="flex items-center justify-between">
+        <p class="font-bold text-[24px] card-title">Fire Service Number</p>
+        <p class="font-light">Fire Service</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Fire
+        </button>
 
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
+        <div class="flex justify-center space-x-4 pt-2 ">
 
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
           </button>
 
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
 
-            <!-- Call Button -->
 
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
+          <button class="flex items-center justify-center space-x-2 rounded-lg call-button"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
 
-            </button>
-          </div>
+          </button>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-4">
 
-          <div class="flex items-center justify-between">
-
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
+        <div class="flex justify-between items-center mb-2">
+          <div class="flex space-x-2">
+            <img src="assets/history.png" class="h-6 w-6">
+            <p class="font-semibold">Call History</p>
           </div>
 
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
-          </button>
-
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
+          <button id="clear-history" class="btn rounded-full text-white bg-green-600 h-8 w-32">Clear</button>
         </div>
-        <div class="bg-white rounded-lg shadow p-4">
 
-          <div class="flex items-center justify-between">
-
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
-          </button>
-
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-4">
-
-          <div class="flex items-center justify-between">
-
-            <img src="./assets/police.png" alt="Police" class="h-10 w-10 mb-2">
-            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6 mb-2">
-
-          </div>
-
-          <p class="font-bold text-[24px]">National Emergency Number</p>
-          <p class="font-light">National Emergency</p>
-          <p class="font-bold text-[28px] pt-3">999</p>
-          <button class="btn btn-square" style="background-color: #f2f2f2;">
-            All
-          </button>
-
-          <div class="flex space-x-4 pt-2 ">
-            <!-- Copy Button -->
-            <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-              style="width: 170px; height: 40px; ">
-              <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
-              <span class="font-normal">Copy</span>
-            </button>
-
-            <!-- Call Button -->
-
-            <button class="flex items-center justify-center space-x-2 rounded-lg"
-              style="width: 170px; height: 40px; background-color: #00A63E; color: white;">
-              <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
-              <span class="font-normal">Call</span>
-
-            </button>
-          </div>
+        <!-- Container for call entries -->
+        <div id="call-history-entries" class="space-y-2">
+          <!-- Call entries will be appended here -->
         </div>
 
       </div>
 
-      <!-- Call History -->
-      <!-- Call History -->
-      <div class="mt-8 p-4">
 
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-5">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/ambulance.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Ambulance Service</p>
+        <p class="font-light">Ambulance</p>
+        <p class="font-bold text-[28px] pt-3 card-number">1994-999999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Health
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg call-button"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
       </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-6">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/emergency.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Women & Child Helpline</p>
+        <p class="font-light">Women & Child Helpline</p>
+        <p class="font-bold text-[28px] pt-3 card-number">109</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          help
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg call-button"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-7">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/emergency.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Anti-Corruption Helpline</p>
+        <p class="font-light">Anti-Corruption</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Govt.
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-8">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/emergency.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Electricity Helpline</p>
+        <p class="font-light">Electricity Outage</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Electricity
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-9">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/brac.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Brac Helpline</p>
+        <p class="font-light">Brac</p>
+        <p class="font-bold text-[28px] pt-3 card-number">16654</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          NGO
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-10">
+
+        <div class="flex items-center justify-between">
+
+          <img src="./assets/Bangladesh-Railway.png" alt="Police" class="h-10 w-10 mb-2">
+          <button class="p-1 rounded-lg hover:bg-gray-200 heart-button">
+            <img src="/assets/hollow_heart.png" alt="Hollow Heart" class="h-6 w-6">
+          </button>
+        </div>
+
+        <p class="font-bold text-[24px] card-title">Bangladesh Railway Helpline</p>
+        <p class="font-light">Bangladesh Railway</p>
+        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <button class="btn btn-square" style="background-color: #f2f2f2;">
+          Travel
+        </button>
+
+        <div class="flex justify-center space-x-4 pt-2 ">
+
+          <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
+            style="width: 200px; height: 40px; ">
+            <img src="./assets/copy.png" alt="Copy" class="h-5 w-5">
+            <span class="font-normal">Copy</span>
+          </button>
+
+
+
+          <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
+            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            <img src="./assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
+            <span class="font-normal">Call</span>
+
+          </button>
+        </div>
+      </div>
+
 
 
     </div>
 
 
   </main>
-
 
 </body>
 
