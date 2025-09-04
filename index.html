@@ -14,7 +14,6 @@
   <!-- JS Scripts -->
 
   <script src="./script.js" defer></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 </head>
@@ -55,31 +54,25 @@
 
   <!-- Hero Section -->
 
-  <section class="w-full text-center flex flex-col items-center justify-center my-5 px-4
-    bg-gradient-to-r from-[#143927] via-[#006747] to-[#143927]">
+  <section class="w-full text-center space-y-4 flex flex-col items-center justify-center my-5"
+    style="background: linear-gradient(to right, #143927, #006747, #143927);">
 
-    <!-- Logo -->
-    <img src="./assets/logo-dark.png" alt="Hero Image" class="w-24 sm:w-32 h-auto pt-3">
+    <img src="./assets/logo-dark.png" alt="Hero Image" class="w-32 h-auto pt-3">
 
-    <!-- Title -->
-    <h1 class="font-bold text-white text-2xl sm:text-4xl md:text-5xl mt-2">
-      Emergency Service Directory
-    </h1>
+    <h1 class="font-bold text-white text-[40px]">Emergency Service Directory</h1>
 
-    <!-- Subtitle -->
-    <p class="text-white font-semibold text-sm sm:text-base md:text-lg pb-3 max-w-3xl">
+    <p class="text-white pb-3 font-semibold">
       Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
     </p>
 
   </section>
 
 
-
   <!-- Main Section -->
 
   <main>
 
-    <div class="main-section p-4" style="background-color: #f5fdf6;">
+    <div class="main-section grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-[#f5fdf6]">
 
       <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-1">
 
@@ -185,7 +178,7 @@
           </button>
         </div>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-4">
+      <div class="bg-white rounded-lg shadow p-4 md:row-span-3">
 
         <div class="flex justify-between items-center mb-2">
           <div class="flex space-x-2">
