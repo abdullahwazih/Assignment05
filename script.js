@@ -4,14 +4,12 @@
 let count = 0;
 let heartCountEl = document.getElementById("heart-count");
 
-// Select ALL heart buttons
 let heartButtons = document.querySelectorAll(".heart-button");
 
-// Add click listener to each button
 heartButtons.forEach(button => {
     button.addEventListener("click", () => {
         count++;
-        heartCountEl.textContent = count; // update the shared counter
+        heartCountEl.textContent = count;
     });
 });
 
@@ -32,27 +30,21 @@ callButtons.forEach(button => {
             return;
         }
 
-        // Deduct 20 coins
         coins -= 20;
         coinElement.innerText = coins;
 
-        // Get card info
         const card = button.closest(".box");
         const title = card.querySelector(".card-title").innerText;
         const number = card.querySelector(".card-number").innerText;
 
-        // Show alert
         alert(`${title} ${number}`);
 
-        // Get current time
         const now = new Date();
-        const time = now.toLocaleTimeString(); // e.g., "12:34:56 PM"
+        const time = now.toLocaleTimeString();
 
-        // Create a new history entry card
         const entryCard = document.createElement("div");
         entryCard.className = "bg-gray-100 rounded-lg p-2 flex justify-between items-center shadow";
 
-        // Left side: title + number (vertical)
         const leftDiv = document.createElement("div");
         leftDiv.className = "flex flex-col";
 
@@ -67,23 +59,42 @@ callButtons.forEach(button => {
         leftDiv.appendChild(titleEl);
         leftDiv.appendChild(numberEl);
 
-        // Right side: time
         const timeEl = document.createElement("span");
         timeEl.className = "text-xs text-gray-600";
         timeEl.textContent = time;
 
-        // Append left and right to entry card
         entryCard.appendChild(leftDiv);
         entryCard.appendChild(timeEl);
 
-        // Append entry card to history container
         callHistoryContainer.appendChild(entryCard);
     });
 });
 
-// Clear history
 clearHistoryButton.addEventListener("click", () => {
     callHistoryContainer.innerHTML = "";
+});
+
+
+//Copy Button
+
+
+const copyCount = document.getElementById("copy-count");
+
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const card = btn.closest(".box");
+        const number = card.querySelector(".card-number").innerText;
+
+        let count = parseInt(copyCount.innerText, 10);
+        count++;
+        copyCount.innerText = count;
+
+        navigator.clipboard.writeText(number).then(() => {
+            alert(`Number ${number} copied!`);
+        }).catch(err => {
+            console.error("Failed to copy:", err);
+        });
+    });
 });
 
 
