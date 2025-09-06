@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Assignment 5</title>
 
   <!-- Tailwind + DaisyUI CDN -->
@@ -22,30 +24,30 @@
 
   <!-- Navigation Bar -->
 
-  <nav class="w-full flex justify-between items-center px-4 sm:px-6 py-4 bg-white shadow">
+  <nav class="w-full flex justify-between items-center px-1 sm:px-6 py-4 bg-white shadow">
 
     <!-- Left Section -->
-    <div class="flex items-center space-x-3 sm:space-x-2">
-      <img src="assets/logo.png" alt="Logo" class="h-20 sm:h-10 w-auto">
-      <p class="font-bold leading-tight text-green-900 text-lg sm:text-base">
+    <div class="flex items-center space-x-1 sm:space-x-2">
+      <img src="assets/logo.png" alt="Logo" class="h-[50px] sm:h-10 w-auto">
+      <p class="font-bold text-green-900 text-xs sm:text-base">
         Emergency<br>Service
       </p>
     </div>
 
     <!-- Right Section -->
-    <div class="flex items-center space-x-4">
-      <div class="rounded-full flex items-center space-x-3 sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-[#ecfcf1]">
-        <img src="assets/heart.png" alt="heart Icon" class="h-20 sm:h-5 w-6 sm:w-5">
-        <span class="font-bold text-lg sm:text-base" id="heart-count">0</span>
+    <div class="flex items-center space-x-1">
+      <div class="rounded-full flex items-center space-x-1 sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-[#ecfcf1]">
+        <img src="assets/heart.png" alt="heart Icon" class="h-6 sm:h-5 w-6 sm:w-5">
+        <span class="font-bold text-xs sm:text-base" id="heart-count">0</span>
       </div>
 
-      <div class="rounded-full flex items-center space-x-3 sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-[#ecfcf1]">
+      <div class="rounded-full flex items-center space-x-1 sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-[#ecfcf1]">
         <img src="assets/coin.png" alt="Phone Icon" class="h-6 sm:h-5 w-6 sm:w-5">
-        <span class="font-bold text-lg sm:text-base" id="coin-amount">100</span>
+        <span class="font-bold text-xs sm:text-base" id="coin-amount">100</span>
       </div>
 
-      <div class="rounded-full flex items-center space-x-3 sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-green-600">
-        <span class="text-white font-semibold text-lg sm:text-base">2 Copy</span>
+      <div class="rounded-full flex items-center sm:space-x-2 px-5 py-3 sm:px-4 sm:py-2 bg-green-600">
+        <span class="text-white font-semibold text-xs sm:text-base">2 Copy</span>
       </div>
     </div>
 
@@ -55,14 +57,14 @@
 
   <!-- Hero Section -->
 
-  <section class="w-full text-center space-y-4 flex flex-col items-center justify-center my-5"
+  <section class="w-full text-center space-y-1 flex flex-col items-center justify-center my-5"
     style="background: linear-gradient(to right, #143927, #006747, #143927);">
 
-    <img src="assets/logo-dark.png" alt="Hero Image" class="w-32 h-auto pt-3">
+    <img src="assets/logo-dark.png" alt="Hero Image" class="w-[100px] h-auto pt-3">
 
-    <h1 class="font-bold text-white text-[40px]">Emergency Service Directory</h1>
+    <h1 class="font-bold text-white text-[25px]">Emergency Service Directory</h1>
 
-    <p class="text-white pb-3 font-semibold">
+    <p class="text-white pb-3 text-[12px]">
       Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
     </p>
 
@@ -75,7 +77,7 @@
 
     <div class="main-section grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-[#f5fdf6]">
 
-      <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-1">
+      <div class="bg-white rounded-lg shadow p-3 box mb-2" id="box-1">
 
         <div class="flex items-center justify-between">
 
@@ -86,9 +88,9 @@
 
         </div>
 
-        <p class="font-bold text-[24px] card-title">National Emergency Number</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">National Emergency Number</p>
         <p class="font-light">National Emergency</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           All
         </button>
@@ -96,13 +98,13 @@
         <div class="flex justify-center space-x-4 items-center pt-2 ">
 
           <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-            style="width: 200px; height: 40px; ">
+            style="width: 180px; height: 40px; ">
             <img src="assets/copy.png" alt="Copy" class="h-5 w-5">
             <span class="font-normal">Copy</span>
           </button>
 
           <button class="call-button flex items-center justify-center space-x-2 rounded-lg"
-            style="width: 200px; height: 40px; background-color: #00A63E; color: white;">
+            style="width: 180px; height: 40px; background-color: #00A63E; color: white;">
             <img src="assets/phone_2.png" alt="Phone Call" class="h-5 w-5">
             <span class="font-normal">Call</span>
 
@@ -119,9 +121,11 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Police Helpline Number</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">
+          Police Helpline Number
+        </p>
         <p class="font-light">Police</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Police
         </button>
@@ -154,9 +158,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Fire Service Number</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Fire Service Number</p>
         <p class="font-light">Fire Service</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Fire
         </button>
@@ -164,7 +168,7 @@
         <div class="flex justify-center space-x-4 pt-2 ">
 
           <button class="flex items-center justify-center space-x-2 rounded-lg border-2 border-gray-230"
-            style="width: 200px; height: 40px; ">
+            style=" width:200px; height: 40px; ">
             <img src="assets/copy.png" alt="Copy" class="h-5 w-5">
             <span class="font-normal">Copy</span>
           </button>
@@ -179,8 +183,8 @@
           </button>
         </div>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 md:row-span-3">
-
+      <!-- Call history -->
+      <div class="bg-white rounded-lg shadow p-4 md:row-span-3 order-last md:order-none">
         <div class="flex justify-between items-center mb-2">
           <div class="flex space-x-2">
             <img src="assets/history.png" class="h-6 w-6">
@@ -194,8 +198,8 @@
         <div id="call-history-entries" class="space-y-2">
           <!-- Call entries will be appended here -->
         </div>
-
       </div>
+
 
 
       <div class="bg-white rounded-lg shadow p-4 box mb-2" id="box-5">
@@ -208,9 +212,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Ambulance Service</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Ambulance Service</p>
         <p class="font-light">Ambulance</p>
-        <p class="font-bold text-[28px] pt-3 card-number">1994-999999</p>
+        <p class="font-bold text-[18px] md:text[24px] pt-3 card-number">1994-999999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Health
         </button>
@@ -243,9 +247,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Women & Child Helpline</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Women & Child Helpline</p>
         <p class="font-light">Women & Child Helpline</p>
-        <p class="font-bold text-[28px] pt-3 card-number">109</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">109</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           help
         </button>
@@ -278,9 +282,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Anti-Corruption Helpline</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Anti-Corruption Helpline</p>
         <p class="font-light">Anti-Corruption</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Govt.
         </button>
@@ -313,9 +317,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Electricity Helpline</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Electricity Helpline</p>
         <p class="font-light">Electricity Outage</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Electricity
         </button>
@@ -348,9 +352,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Brac Helpline</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Brac Helpline</p>
         <p class="font-light">Brac</p>
-        <p class="font-bold text-[28px] pt-3 card-number">16654</p>
+        <p class="font-bold pt-3 text-[18px] md:text-[24px] pt-3 card-number">16654</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           NGO
         </button>
@@ -383,9 +387,9 @@
           </button>
         </div>
 
-        <p class="font-bold text-[24px] card-title">Bangladesh Railway Helpline</p>
+        <p class="font-bold text-[18px] md:text-[28px] card-title">Bangladesh Railway Helpline</p>
         <p class="font-light">Bangladesh Railway</p>
-        <p class="font-bold text-[28px] pt-3 card-number">999</p>
+        <p class="font-bold text-[18px] md:text-[24px] pt-3 card-number">999</p>
         <button class="btn btn-square" style="background-color: #f2f2f2;">
           Travel
         </button>
@@ -408,6 +412,7 @@
           </button>
         </div>
       </div>
+
 
 
 
